@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="595.0" prefWidth="873.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.AddProductController">
+   <children>
+      <AnchorPane layoutX="20.0" layoutY="54.0" prefHeight="516.0" prefWidth="801.0" style=" -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;">
+         <children>
+            <Label layoutX="44.0" layoutY="87.0" text="ID" />
+            <Label layoutX="44.0" layoutY="133.0" text="Name" />
+            <Label layoutX="44.0" layoutY="175.0" text="Inv" />
+            <Label layoutX="44.0" layoutY="220.0" prefHeight="0.0" prefWidth="28.0" text="Price" />
+            <Label layoutX="44.0" layoutY="267.0" text="Max" />
+            <Label layoutX="193.0" layoutY="267.0" text="Min" />
+            <TextField fx:id="AddProdIdText" disable="true" editable="false" layoutX="119.0" layoutY="81.0" text="Auto Gen - Disabled" />
+            <TextField fx:id="AddProdNameText" layoutX="119.0" layoutY="127.0" promptText="Name" />
+            <TextField fx:id="AddProdInvText" layoutX="119.0" layoutY="169.0" prefHeight="25.0" prefWidth="66.0" promptText="Inventory" />
+            <TextField fx:id="AddProdPriceText" layoutX="119.0" layoutY="214.0" prefHeight="25.0" prefWidth="66.0" promptText="Price" />
+            <TextField fx:id="AddProdMaxText" layoutX="119.0" layoutY="261.0" prefHeight="25.0" prefWidth="66.0" promptText="Max" />
+            <TextField fx:id="AddProdMinText" layoutX="222.0" layoutY="263.0" prefHeight="25.0" prefWidth="59.0" promptText="Min" />
+            <TableView fx:id="AddProdAddTable" layoutX="368.0" layoutY="63.0" prefHeight="159.0" prefWidth="390.0">
+              <columns>
+                <TableColumn fx:id="AddProdAddIdCol" prefWidth="75.0" text="Part ID" />
+                <TableColumn fx:id="AddProdAddNameCol" prefWidth="82.0" text="Part Name" />
+                  <TableColumn fx:id="AddProdAddInvCol" prefWidth="106.0" text="Inventory Level" />
+                  <TableColumn fx:id="AddProdAddPriceCol" prefWidth="126.0" text="Price/Cost per Unit" />
+              </columns>
+            </TableView>
+            <TextField fx:id="AddPartSearchText" layoutX="571.0" layoutY="26.0" promptText="Search by Part ID or Name" />
+            <TableView fx:id="AddProdRemTable" layoutX="368.0" layoutY="274.0" prefHeight="159.0" prefWidth="390.0">
+              <columns>
+                <TableColumn fx:id="AddProdRemIdCol" prefWidth="75.0" text="Part ID" />
+                <TableColumn fx:id="AddProdRemNameCol" prefWidth="75.0" text="Part Name" />
+                  <TableColumn fx:id="AddProdRemInvCol" prefWidth="108.0" text="Inventory Level" />
+                  <TableColumn fx:id="AddProdRemPriceCol" prefWidth="131.0" text="Price/Cost per Unit" />
+              </columns>
+            </TableView>
+            <Button fx:id="AddProdAddPartButton" layoutX="675.0" layoutY="237.0" mnemonicParsing="false" onAction="#AddButtonAction" text="Add" />
+            <Button fx:id="AddProdRemovePartButton" layoutX="571.0" layoutY="439.0" mnemonicParsing="false" onAction="#RemoveButtonAction" prefHeight="25.0" prefWidth="149.0" text="Remove Associated Part" />
+            <Button fx:id="AddProdSaveButton" layoutX="571.0" layoutY="477.0" mnemonicParsing="false" onAction="#SaveButtonAction" text="Save" />
+            <Button fx:id="AddProdCancelButton" layoutX="668.0" layoutY="477.0" mnemonicParsing="false" onAction="#CancelButtonAction" text="Cancel" />
+            <Label layoutX="38.0" layoutY="18.0" text="Add Product">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="NameErrorLabel" disable="true" layoutX="14.0" layoutY="302.0" prefHeight="17.0" prefWidth="343.0" />
+            <Label fx:id="InvErrorLabel" disable="true" layoutX="14.0" layoutY="319.0" prefHeight="17.0" prefWidth="343.0" />
+            <Label fx:id="PriceErrorLabel" disable="true" layoutX="14.0" layoutY="336.0" prefHeight="17.0" prefWidth="343.0" />
+            <Label fx:id="MaxErrorLabel" disable="true" layoutX="14.0" layoutY="354.0" prefHeight="17.0" prefWidth="343.0" />
+            <Label fx:id="MinErrorLabel" disable="true" layoutX="14.0" layoutY="371.0" prefHeight="17.0" prefWidth="343.0" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
